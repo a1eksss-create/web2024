@@ -2,10 +2,85 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-.test {
-    color: yellow !important;
+.paragraf{
+    font-size: 16px;
+    line-height: 26px;
+    color: #1F3F68;
 }
 
-.test {
-    color: red !important;
+.head1{
+    font-size: 64px;
+    color: #1F3F68;
 }
+
+.head2{
+    font-weight: 500;
+    font-size: 44px;
+    text-align: center;
+}
+
+.head3{
+    font-size: 36px;
+    text-align: center;
+}
+
+.head4{
+    font-size: 20px;
+    line-height: 30px;
+    color: #1F3F68;
+}
+
+.textinp{
+    border: 1px solid #356EAD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    opacity: 0.4;
+    display: block; 
+    margin-top: 5px;
+}
+
+.but{
+    background-image: linear-gradient(to right, #5A98D0, #7366bd, #9400d3);
+    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px; 
+    text-align: center;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    margin-top: 5px;
+}
+
+label{ 
+    display: block; 
+} 
+
+form{
+    background-image: url("../img/3.jpg");
+}
+
+ul.breadcrumb{
+    padding: 10px 16px;
+    list-style: none;
+    background-image: linear-gradient(#FFFFFF, #95BBBB, #5B9596);
+}
+
+ul.breadcrumb li{
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before{
+    padding: 8px;
+    font-size:24px;
+    color: black;
+    content: ")\00a0";
+}
+
+ul.breadcrumb li a{
+    color: black;
+    text-decoration: none;
+} 
+  
