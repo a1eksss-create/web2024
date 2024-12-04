@@ -2,85 +2,339 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-.paragraf{
-    font-size: 16px;
-    line-height: 26px;
-    color: #1F3F68;
-}
-
-.head1{
-    font-size: 64px;
-    color: #1F3F68;
-}
-
-.head2{
-    font-weight: 500;
-    font-size: 44px;
-    text-align: center;
-}
-
-.head3{
-    font-size: 36px;
-    text-align: center;
-}
-
-.head4{
-    font-size: 20px;
-    line-height: 30px;
-    color: #1F3F68;
-}
-
-.textinp{
-    border: 1px solid #356EAD;
+*{
     box-sizing: border-box;
-    border-radius: 10px;
-    opacity: 0.4;
-    display: block; 
-    margin-top: 5px;
+    margin: 0px;
+    padding: 0px;
 }
 
-.but{
-    background-image: linear-gradient(to right, #5A98D0, #7366bd, #9400d3);
-    box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
-    border-radius: 10px;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 26px; 
-    text-align: center;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    padding: 10px 30px;
-    margin-top: 5px;
+body{
+    background: rgba(242, 244, 247, 1);
 }
 
-label{ 
-    display: block; 
-} 
-
-form{
-    background-image: url("../img/3.jpg");
+header{
+    width: 100%;
+    height: 56px;
+    padding: 16px 24px 16px 24px;
+    border-radius: 12px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: white;
 }
 
-ul.breadcrumb{
-    padding: 10px 16px;
+h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+button{
+    background: rgba(45, 102, 238, 1);
+    padding: 11px 24px 11px 24px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+header h3{
+    color: rgba(45, 102, 238, 1);
+}
+
+.nav{
+    margin: 0 20px; 
     list-style: none;
-    background-image: linear-gradient(#FFFFFF, #95BBBB, #5B9596);
+    padding: 0;
 }
-
-ul.breadcrumb li{
-    display: inline;
-    font-size: 18px;
-}
-
-ul.breadcrumb li+li:before{
-    padding: 8px;
-    font-size:24px;
-    color: black;
-    content: ")\00a0";
-}
-
-ul.breadcrumb li a{
-    color: black;
-    text-decoration: none;
-} 
   
+.nav li {
+    display: inline-block;
+    margin-right: 20px;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.nav a, .contact a{
+    text-decoration: none;
+}
+  
+.contact{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact p{
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(45, 102, 238, 1);
+}
+
+.mainBlock{
+    width: 100%;
+    height: 900px;
+    padding: 60px 100px;
+    background-image: url("../img/main.png");
+    background-size: 50% auto;
+    background-position: right center; 
+    background-repeat: no-repeat;
+}
+
+.mainDescription{
+    width: 600px;
+    height: 220px;
+    top: 160px;
+    left: 108px;
+}
+
+.contactForm{
+    width: 676px;
+    height: 186px;
+    padding: 24px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
+}
+
+.contactForm p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.contactForm label{
+    display: block;
+    font-size: 13px;
+}
+
+.contactForm input{
+    font-size: 17px;
+}
+
+.contactForm button{
+    width: 132px;
+    height: 58px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom:20px
+}
+
+.typesDevelopment{
+    padding: 30px 0px 30px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+.typesDevelopment h3{
+    margin: 30px 0px 15px 0px;
+}
+
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.webAndMobile{
+    width: 600px;
+    height: 324px;
+    font-size: 17px;
+    padding-right: 30px;
+}
+
+.choiceDevelopment{
+    width: 233px;
+    height: 340px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.choiceDevelopment ul{
+    list-style: none;
+}
+
+.choiceDevelopment li{
+    margin-bottom: 12px;
+}
+
+.choiceDevelopment a{
+    text-decoration: none;
+    color: black;
+}
+.choiceSphere{
+    width: 1223px;
+    height: 280px;
+    font-size: 17px;
+    padding-right: 60px;
+}
+
+.choiceSphere ul{
+    column-count: 3;        
+    column-gap: 20px;
+    list-style: none;
+}
+
+.spheresDevelopment, .projects, .feedback, .stagesDevelopment, .team, .bookForm, .FAQ{
+    padding: 60px 0px 30px 100px;
+}
+
+.spheresDevelopment h2{
+    width: 600px;
+}
+
+.chousenProject{
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.listProjects{
+    font-size: 17px;
+    margin-top: 60px;
+}
+
+.listProjects li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.listProjects ul{
+    display: inline-block;
+}
+
+.listProjects button{
+    width: 207px;
+    height: 40px;
+    margin-left: 200px;
+}
+
+.I-Teka{
+    width: 700px;
+}
+
+.I-Teka p{
+    margin-bottom: 30px;
+}
+
+.feedback, .bookForm{
+    background-color: rgba(45, 102, 238, 1);
+}
+
+.bookForm{
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.team{
+    display:flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+}
+
+.contactFormt{
+    background-color: white;
+    width: 600px;
+}
+
+.feedback p{
+    font-size: 15px;
+}
+
+.typeStages{
+    width: 392px;
+    height: 172px;
+    font-size: 15px;
+    box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.imageHeader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.typeStages h4{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.stagesDevelopment{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 810px;
+}
+
+.team p{
+    margin-bottom: 20px;
+}
+
+.teamInform{
+    width: 600px;
+}
+
+.question, .allQuestions{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+}
+.allQuestions{
+    flex-wrap: wrap; 
+    align-items: flex-start; 
+    height: 420px;
+}
+
+.question, .questionDisclosed{
+    width: 600px; 
+    margin-bottom: 20px; 
+}
+
+.bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer {
+    background: rgba(16, 24, 40, 1);
+    padding: 20px 0; 
+    color: white;
+    text-align: center;
+}
+
+.footerSection{
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+
+}
+
+.contact {
+    margin-bottom: 5px;
+}
+  
+.choiceSphere ul {
+    height: 280px;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+    flex-wrap: wrap;
+}
+  
+.sphereItem{
+    display: flex;
+    height: 44px;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 391px;
+}

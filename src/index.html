@@ -1,41 +1,320 @@
 <!DOCTYPE html>
-<html lang = "ru">
+<html lang = "en">
 <head>
     <meta charset="UTF-8">
     <title> Главная страница </title>
-    <link rel="stylesheet" type="text/css" href="assets\styles\style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
 </head>
 <body>
     <header>
-        <ul class = "breadcrumb">
-            <img src = "assets\icons\1.png" alt = "Тут логотип ТюмГУ">
-            <li><a href = "index.html">Главная страница</a></li>
-            <li><a href = "contacts.html">Контакты</a></li>
-        </ul>
-    </header>
-    <h1 class = "head1"> Сайт ТюмГУ </h1>
-    <p class = "paragraf">Тюменский государственный университет (ТюмГУ) — первый университет Тюменской области, был открыт в 1930 году. Готовит специалистов по 
-        175 направлениям подготовки. Университет входит в число участников Проекта 5-100 — программы повышения международной конкурентоспособности 
-        российских вузов среди ведущих мировых научно-образовательных центров.
-    </p>
-    <h3 class = "head3">Школа компьютерных наук</h3>
-    <h4 class = "head4">Кафедра программной и системной инженерии</h4>
-    <p class = "paragraf">В 2018 году кафедра математики и информатики была переименована в кафедру программной и системной инженерии и ее заведующим 
-        стал Ивашко Александр Григорьевич.
-    </p>
-    <h3 class = "head3">Прикладная информатика</h3>
-    <p class = "paragraf">Прикладная информатика - одно из ведущих направлений кафедры.</p>
+          <h3>IT WEBSITE</h3>
+          <nav>
+            <ul class="nav">
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            </nav>
+          <div class="contact">
+            <p>+7 (111) 111 11 11</p>
+            <p>+7 (111) 111 11 11</p>
+            <p><a href="mailto:itcompany@mail.com">itcompany@mail.com</a></p>
+          </div>
+      </header>
+
+    <mail class = "mainBlock">
+        <div class = "mainDescription">
+            <h2>Development of mobile applications and web services of any complexity</h2>
+            <p>We create mobile applications for iOS, Android that transfer your business to mobile applications of your customers' devices</p>
+        </div>
+        <div class = "contactForm">
+            <p>Leave your contacts and we will call you back within 30 minutes</p>
+            <div class = "formInput">
+                <form>
+                    <label for="phone"> Phone number </label>
+                    <input type = "text"  id="phone" placeholder="+7 (111) 111-11-11">
+                    <label for="fullname">Full name</label>
+                    <input type = "text" id="fullname" placeholder="Иванов Иван">
+                    <button type = "submit">Get consultation</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
     <hr>
+
+    <section class = "typesDevelopment">
+        <div class = "webAndMobile">
+            <h2>Full development cycle</h2>
+            <p>We use proven technologies</p>
+            <h3>Web</h3>
+            <p>PHP / Javascript / Node.JS / Web Socket / Socket.io / Vue.js/ Nuxt / MySQL / Laravel / GO lang / django / Python</p>
+            <h3>Mobile</h3>
+            <p>Swift / Kotlin / Alamofire / Firebase / CoreData / Room / Realm / Coroutine / RxJava / RxSwift / Unit Test / Navigation</p>
+        </div>
+        <div class = "choiceDevelopment">
+            <ul>
+                <li><a href="#">iOS development</a></li>
+                <li><a href="#">Android development</a></li>
+                <li><a href="#">Web development</a></li>
+                <li><a href="#">UI/UX design</a></li>
+                <li><a href="#">Testing</a></li>
+                <li><a href="#">Launch</a></li>
+                <li><a href="#">IT consulting</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class = "spheresDevelopment">
+        <h2>Developed more than 100 projects in 15 industries</h2>
+        <div class = "choiceSphere">
+            <ul>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/1_sphere.png" alt="Social media">
+                    <li>Social media</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/2_sphere.png" alt="Fitness and sport">
+                    <li>Fitness and sport</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/3_sphere.png" alt="Bank">
+                    <li>Bank</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/4_sphere.png" alt="Construction">
+                    <li>Construction</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/5_sphere.png" alt="Game projects">
+                    <li>Game projects</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/6_sphere.png" alt="Education">
+                    <li>Education</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/7_sphere.png" alt="Auto, transport">
+                    <li>Auto, transport</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/8_sphere.png" alt="Medicine, health">
+                    <li>Medicine, health</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/9_sphere.png" alt="Restaurants, food delivery">
+                    <li>Restaurants, food delivery</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/10_sphere.png" alt="Marketplaces">
+                    <li>Marketplaces</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/11_sphere.png" alt="Ar technology">
+                    <li>Ar technology</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/12_sphere.png" alt="TV series">
+                    <li>TV series</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/13_sphere.png" alt="Startups">
+                    <li>Startups</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/14_sphere.png" alt="Religion">
+                    <li>Religion</li>
+                </div>
+                <div class = "sphereItem">
+                    <img src = "assets/icons/15_sphere.png" alt="Online courses">
+                    <li>Online cources</li>
+                </div>
+            </ul>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class = "projects">
+        <h2>Projects we are proud of</h2>
+        <p>Our software development company is truly proud of the wonderful clients we have worked with. We enjoy a long-term partnership</p>
+        <div class = "listProjects">
+            <ul>
+                <li>l-teka</li>
+                <li>Dauletten</li>
+                <li>Guru Bosch</li>
+                <li>Santo</li>
+                <li>Home Credit Bank</li>
+                <li> BI Partners</li>
+                <li>Europharma</li>
+            </ul>
+            <button type = "submit">View 100 more projects</button>
+        </div>
+        <div class = "chousenProject">
+            <article class = "I-Teka">
+                <h2>I-teka</h2>
+                <p>The application is designed to search for drugs by availability in pharmacies in cities. During quarantine, the application helped many people, which gives more value.</p>
+                <p>Business analysis / iOS / Android / QA / UI/UX Design</p>
+                <p>Kazakhstan Medicine </p>
+                <p>400% +200 000</p>
+                <p>User Growth Active Users</p>
+            </article>
+            <img src ="assets/img/i-teka.png">
+        </div>
+    </section>
+
+    <hr>
+
+    <section class = "feedback">
+        <div class = "informFeedback">
+            <h2>Let's discuss Your project</h2>
+            <p>Let's figure out how to create an effective application,
+                its cost and terms of its development</p>
+        </div>
+        <div class = "contactForm">
+            <form>
+                <label for="bestPhone">Best phone number</label>
+                <input type = "text" id="bestPhone" placeholder="+7 (702) 517-11-98">
+                <label for="bestFullname">Full name</label>
+                <input type = "text" id="bestFullname" placeholder="Иванов Иван">
+                <button type = "submit">Discuss the project</button>
+            </form>
+        </div>    
+    </section>
+
+    <hr>
+
+    <section class = "stagesDevelopment">
+        <h2>Application Development Stages</h2>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/planing.png">
+                <h4>Analysis</h4>
+            </div>
+            <p>We write technical specifications for development, taking into account the business processes and technologies of the customer and the needs of users.</p>
+        </div>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/graphic-design.png">
+                <h4>Design</h4>
+            </div>
+            <p>We adapt the customer's corporate identity to the platform guidelines. We draw convenient and understandable interfaces.</p>
+        </div>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/computer coding.png">
+                <h4>Development</h4>
+            </div>
+            <p>We create an extensible architecture, write clean and stable code. We integrate with customer technologies.</p>
+        </div>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/copyright.png">
+                <h4>Testing</h4>
+            </div>
+            <p>We carry out functional testing and do bug fixes. We adapt the application to different phone resolutions</p>
+        </div>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/hosting 1.png">
+                <h4>Launching</h4>
+            </div>
+            <p>We design the application page and publish it in the App Store and Google Play stores.</p>
+        </div>
+        <div class="typeStages">
+            <div class="imageHeader">
+                <img src = "assets/icons/application.png">
+                <h4>Support</h4>
+            </div>
+            <p>We monitor the stability of the application, update it for new devices and versions of iOS and Android.</p>
+        </div>
+    </section>
+
+    <hr>
+
+    <section class = "team">
+        <div class = "teamInform">
+            <h2>Our team</h2>
+            <p>Thousand is a full-cycle digital production company with its own product analytics, design, web and mobile development.</p>
+            <p>28 +100 7 years</p>
+            <p>team members projects in IT sphere </p>
+            <p>All the necessary specialists - from a designer to a tester - are on our staff. We hire the best specialists in the market. It's expensive but worth it</p>
+        </div>
+        <img src = "assets/img/team.png">
+    </section>
+
+    <hr>
+
+    <section class="bookForm">
+        <h2>Get the book for free by leaving your contacts</h2>
+        <div class = "contactForm">
+            <form>
+                <label>Phone number</label>
+                <input type = "text" placeholder="+7 (702) 517-11-98">
+                <input type = "text" placeholder="Your full name">
+                <label>email</label>
+                <input type = "email" placeholder="mail@mail.com">
+                <button type = "submit">Send me ebook to my mail</button>
+            </form>
+        </div>    
+        <img src = "assets/img/book.png">;
+    </section>
+
+    <hr>
+
+    <section class = "FAQ">
+        <h2>FAQ</h2>
+        <div class="allQuestions">
+            <div class = "question">
+                <p><span class = "bold">What is the cost of a mobile application?</span></p>
+                <img src="assets/icons/questionplus.png">
+            </div>
+            <div class = "questionDisclosed">
+                <p><span class = "bold">How long will development take?</span></p>
+                <p>Development terms directly depend on the requirements for the mobile application, the characteristics of the company, as well as the wishes of the customer.</p>
+                <p>Average development time from start to finished application:
+                    Medium projects up to 3 months.
+                    Large projects about 4-6 months.
+                    To get a more accurate estimate of the project completion time, it is necessary to determine the main task of the application, think over its logic and functionality.</p>
+            </div>
+            <div class = "question">
+                <p><span class = "bold">Do you provide a guarantee for the mobile application?</span></p>
+                <img src="assets/icons/questionplus.png">
+            </div>
+            <div class = "question">
+                <p><span class = "bold">I will not tell my idea, do you guarantee confidentiality?</span></p>
+                <img src="assets/icons/questionplus.png">
+            </div>
+        </div>
+    </section>
+    
+    <hr>
+      
     <footer>
-        <h3 class = "head3">О нас</h3>
-        <p class = "paragraf">Здесь вы можете прочитать про ТюмГУ.</p>
-        <hr>
-        <ul>
-            <li>Тюмень</li>
-            <li>7 (3452) 59-77-59</li>
-            <li>ed@utmn.ru</li>
-        </ul>
-        <p class = "paragraf">&copy; Все права защищены</p>
-    </footer>
+        <h2>IT WEBSITE</h2>
+        <div class="footerSection">
+            <div class="contactFooter">
+                <p> <img src="assets/icons/smartphone_outline_24.png" alt=""> Contact nums</p>
+                <p>+7 (778) 395 90 26</p>
+            </div>
+            <div class="contactFooter">
+                <p> <img src="assets/icons/mail_outline_24.png" alt=""> Post</p>
+                <p>mail@mail.com</p>
+            </div>
+            <div class="contactFooter">
+                <p> <img src="assets/icons/place_outline_24.png" alt=""> Adress</p>
+                <p>City city, steet st. 90</p>
+            </div>
+            <div class="contactFooter">
+                <p> <img src="assets/icons/document_outline_24.png" alt=""> Leave a request</p>
+                <p>Leave a request</p>
+            </div>
+        </div>
+        <p> <img src="assets/icons/Vector.png" alt=""> We work throughout world</p>
+    </footer>   
 </body>
 </html>
