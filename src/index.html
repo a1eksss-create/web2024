@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <title> Главная страница </title>
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0"/>
 </head>
 <body>
+    <div class = "blockBackImg">
     <header>
-          <h3>IT WEBSITE</h3>
-          <nav>
-            <ul class="nav">
+        <div class="hamburger">
+            <img src="assets/icons/Group 625890.png">
+        </div>
+        <h3>IT WEBSITE</h3>
+        <nav>
+            <ul class="navLinks">
                 <li><a href="#">Service</a></li>
                 <li><a href="#">Mobile</a></li>
                 <li><a href="#">Cases</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Contacts</a></li>
             </ul>
-            </nav>
-          <div class="contact">
-            <img class="headImg" src = "assets/icons/head_phone.png">
-            <p>+7 (707) 254 81 47</p>
-            <p>+7 (778) 395 90 26</p>
-            <img class="headImg" src = "assets/icons/head_mail.png">
+        </nav>
+        <div class="contact">
+            <div class = "phone">
+                <img class="headImg" src = "assets/icons/head_phone.png" alt="">
+                <p>+7 (707) 254 81 47</p>
+                <p>+7 (778) 395 90 26</p>
+            </div>
+            <div class = "email">
+            <img class="headImg" src = "assets/icons/head_mail.png" alt="">
             <p><a href="mailto:thousanditcompany@gmail.com">thousanditcompany@gmail.com</a></p>
-          </div>
-      </header>
+            </div>
+        </div>
+    </header>
 
     <main class = "mainBlock">
         <div class = "mainDescription">
@@ -49,6 +58,36 @@
             </div>
         </div>
     </main>
+    </div >
+   
+    <section class = "typesDevelopment">
+        <div class = "webAndMobile">            
+                <h2>Full development cycle</h2>
+                <p class = "signature">We use proven technologies</p>
+            <h3>Web</h3>
+            <p>PHP<span class = "blueTxt"> / </span>Javascript<span class = "blueTxt"> / </span>Node.JS<span class = "blueTxt"> / </span>Web Socket<span class = "blueTxt"> / </span>
+                Socket.io<span class = "blueTxt"> / </span>Vue.js<span class = "blueTxt"> / </span>Nuxt<span class = "blueTxt">/</span>MySQL<span class = "blueTxt"> / </span>Laravel
+                <span class = "blueTxt"> / </span>GO lang<span class = "blueTxt"> / </span>django<span class = "blueTxt"> / </span>Python
+            </p>
+            <h3>Mobile</h3>
+            <p>Swift<span class = "blueTxt"> / </span>Kotlin<span class = "blueTxt"> / </span>Alamofire<span class = "blueTxt"> / </span>Firebase<span class = "blueTxt"> / </span>
+                CoreData<span class = "blueTxt"> / </span>Room<span class = "blueTxt"> / </span>Realm<span class = "blueTxt"> / </span>Coroutine<span class = "blueTxt"> / </span>
+                RxJava<span class = "blueTxt"> / </span>RxSwift<span class = "blueTxt"> / </span>Unit Test<span class = "blueTxt"> / </span>Navigation
+            </p>
+        </div>
+        <div class = "choiceDevelopment">
+            <ul>
+                <li><a href="#">iOS development<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">Android development<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">Web development<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">UI/UX design<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">Testing<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">Launch<span class = "blueTxt"> ❯ </span></a></li>
+                <li><a href="#">IT consulting<span class = "blueTxt"> ❯ </span></a></li>
+            </ul>
+        </div>
+    </section>
+
     <footer>
         <h2>IT WEBSITE</h2>
         <div class="footerSection">

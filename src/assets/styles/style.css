@@ -8,45 +8,56 @@
     padding: 0px;
 }
 
+html{
+    font-size: 10px;
+}
+
 body{
     font-family: Arial, sans-serif;
     background: rgba(242, 244, 247, 1);
+    width: 100%
+}
+
+.blockBackImg{
     background-image: url("../img/main.png");
     background-size: 55% auto;
     background-position: right top; 
     background-repeat: no-repeat;
+    
 }
 
 header{
     position: sticky;
-    top: 20px;
-    width: 1124px;
-    height: 56px;
+    top: 2rem;
+    width: 90%;
+    height: 12%;
     margin: auto;
-    padding: 16px 24px 16px 24px;
-    border-radius: 12px;
+    padding: 1.6rem 2.4rem 1.6rem 2.4rem;
+    border-radius: 1.2rem;
     display: flex; 
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between; 
     align-items: center; 
     background-color: white;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.08);
 }
 
 h3{
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
 }
 
 h2{
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: 700;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
 }
 
 button{
     background: rgba(45, 102, 238, 1);
-    padding: 11px 24px 11px 24px;
-    border-radius: 8px;
+    padding: 1.1rem 2.4rem 1.1rem 2.4rem;
+    border-radius: 0.8rem;
     color: white;
     border: none;
 }
@@ -55,31 +66,53 @@ header h3{
     color: rgba(45, 102, 238, 1);
 }
 
-.nav{
-    margin: 0 20px; 
-    list-style: none;
-    padding: 0;
-}
-  
-.nav li {
-    display: inline-block;
-    margin-right: 20px;
-    color: rgba(16, 24, 40, 1);
-    font-weight: 500;
-    font-size: 14px;
+.phone, .email{
+    display: flex;
+    flex-direction: row;
 }
 
-.nav a, .contact a{
+.hamburger{
+    display: none;
+}
+
+nav{
+    width: auto;
+    min-width: 100px;
+    max-width: 30%;
+}
+
+.navLinks{
+    margin: 0 2rem; 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width:auto;
+}
+  
+.navLinks li {
+    margin-right: 2rem;
+    color: rgba(16, 24, 40, 1);
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+.navLinks a, .contact a{
     text-decoration: none;
 }
 
-.nav a{
+.navLinks a{
     color: rgba(16, 24, 40, 1);
     font-weight: 500;
 }
 
 .headImg, .footImg{
-    margin-right: 5px;
+    margin-right: 0.5rem;
+}
+.headImg{
+    width: 2.4rem;
+    height: 2.4rem;
 }
   
 .contact{
@@ -88,11 +121,15 @@ header h3{
 }
 
 .contact p{
-    margin-right: 20px;
+    margin-right: 2rem;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 1.4rem;
     color: rgba(45, 102, 238, 1);
-    line-height: 24px;
+    line-height: 2.4rem;
+}
+
+.phone p{
+    white-space: nowrap;
 }
 
 .contact a{
@@ -101,8 +138,8 @@ header h3{
 
 .mainBlock{
     width: 100%;
-    height: 790px;
-    padding: 60px 100px 0px 100px;
+    height: 79rem;
+    padding: 6rem 10rem 0rem 10rem;
 }
 
 .blueTxt{
@@ -110,51 +147,51 @@ header h3{
 }
 
 .mainDescription{
-    width: 600px;
-    height: 220px;
-    margin-top: 40px;
+    width: 45%;
+   height: auto;
+    margin-top: 4rem;
 }
 
 .mainDescription p {
-    font-size: 15px;
+    font-size: 1.5rem;
     font-weight: 500;
 }
 
 .contactForm{
-    width: 676px;
-    height: 186px;
-    padding: 24px;
-    border-radius: 12px;
+    width: 67.6rem;
+    height: 18.6rem;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
     background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
-    margin-top: 40px;
+    box-shadow: 0rem 0rem 2.4rem 0rem rgba(0, 0, 0, 0.16);
+    margin-top: 4rem;
 }
 
 .contactForm p{
-    width: 450px;
-    font-size: 20px;
-    line-height: 24px;
+    width: 45rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
     font-weight: 700;
 }
 
 .formInput form{
-    width: 628px;
+    width: 62.8rem;
     display: flex;
     flex-direction: row; 
     align-items: flex-end;
-    margin-top: 32px;
+    margin-top: 3.2rem;
 }
 
 .contactForm label{
-    font-size: 13px;
+    font-size: 1.3rem;
     display: block; 
-    margin-bottom: 5px; 
+    margin-bottom: 0.5rem; 
     color: rgba(102, 112, 133, 1);
 
 }
 
 .contactForm input{
-    font-size: 17px;
+    font-size: 1.7rem;
     border: 0.7px solid rgba(208, 213, 221, 1);
     border-style: none none solid none;
     
@@ -166,42 +203,88 @@ header h3{
   
   
 .formInputGroup {
-    margin-right: 20px; 
+    margin-right: 2rem; 
 }
   
 .contactForm button{
-    width: 132px;
-    height: 58px;
-    font-size: 14px;
+    width: 13.2rem;
+    height: 5.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
     text-align: left;
 }
 
-footer {
+.typesDevelopment{
+    padding: 6rem 0rem 6rem 10rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+.typesDevelopment h3{
+    margin: 3rem 0rem 1.5rem 0rem;
+}
+
+
+.webAndMobile{
+    width: 49.6rem;
+    height: 32.4rem;
+    font-size: 1.7rem;
+    margin-right: 28rem; 
+}
+.webAndMobile p{
+    line-height: 2.2rem;
+}
+
+.signature{
+    font-size: 1.5rem;
+}
+.choiceDevelopment{
+    width: 23.3rem;
+    height: 34rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+}
+
+.choiceDevelopment ul{
+    list-style: none;
+}
+
+.choiceDevelopment li{
+    margin-bottom: 1.2rem;
+}
+
+.choiceDevelopment a{
+    text-decoration: none;
+    color: black;
+    line-height: 3.4rem;
+}
+
+footer{
     background: rgba(16, 24, 40, 1);
-    padding: 20px 0; 
+    padding: 2rem 0; 
     color: white;
     text-align: center;
-    width: 1224px;
+    width: 90%;
     margin: auto;
-    border-radius: 12px;
-    height: 222px;
+    border-radius: 1.2rem;
+    height: 22.2rem;
 }
 
 .footerSection{
     display: flex;
     justify-content: space-around; 
     flex-wrap: wrap;
-    margin-bottom: 48px;
-
+    margin-bottom: 4.8rem;
 }
 
 .contact {
-    margin-bottom: 5px;
+    margin-bottom: 0.5rem;
 }
   
 .contactFooter p{
-    font-size: 17px;
+    font-size: 1.7rem;
     color: rgba(255, 255, 255, 1);
 }
 
@@ -209,20 +292,237 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .contactFooterBlock p{
-    font-size: 14px;
+    font-size: 1.4rem;
     color: rgba(152, 162, 179, 1);
 }
 
 .footerSectionBlock{
-    width: 190px;
+    width: 19rem;
     margin:auto;
-    font-size: 13px;
+    font-size: 1.3rem;
     color: rgba(255, 255, 255, 1);
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+@media (max-width: 768px) and (min-width: 426px){
+    .blockBackImg{
+        background-image: url("../img/mainMedia.png");
+    }
+
+    header{
+        top: 10px;
+        width: 100%;
+        height: 9rem;
+        justify-content: space-between; 
+    }
+    
+    h2{
+        font-size: 2.8rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    nav, .phone{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .headImg, .footImg{
+        margin-right: 5px;
+    }
+
+    .mainBlock{
+       height: auto;
+        padding: 2rem 0rem 2rem 2rem;
+    }
+    
+    .mainDescription{
+        width: 53%;
+       height: auto;
+        margin-top: 2rem;
+    }
+    
+    .contactForm{
+        width: 29.5rem;
+       height: auto;
+        padding: 3.2rem;
+        margin-top: 2.4rem;
+    }
+    
+    .contactForm p{
+        width: 100%;
+        font-size: 1.6rem;
+    }
+    
+    .formInput form{
+        width: 100%;
+        flex-direction: column; 
+        align-items: start;
+    }
+    
+    .contactForm input{
+        font-size: 1.4rem;   
+    }
+      
+    .formInputGroup {
+        margin-bottom: 2rem; 
+    }
+      
+    .contactForm button{
+        width: 160px;
+        margin-top: 1.2rem;
+    }
+    
+    .typesDevelopment{
+        padding: 2rem 0rem 2.6rem 2rem;
+       height: auto;
+    }
+         
+    .webAndMobile{
+        width: 50%;
+       height: auto;
+        font-size: 1.4rem;
+        margin-right: 8%; 
+    }
+    
+    .choiceDevelopment{
+        width: 40%;
+        margin-top: 15%;
+       height: auto;
+    }
+    
+    .choiceDevelopment a{
+        line-height: 2.4rem;
+    }
+    
+    footer{
+        width: 100%;
+    }
+}
+
+@media (max-width: 426px) {
+    .blockBackImg{
+        background-image: url("../img/mainMedia2.png");
+        background-size: auto 72%;
+        background-position: center bottom; 
+        height: 1140px;
+    }
+
+    header{
+        top: 10px;
+        width: 97%;
+        height: 9rem;
+        justify-content: space-between; 
+    }
+    
+    h2{
+        font-size: 2.8rem;
+        margin-bottom: 2.4rem;
+    }
+    
+    nav, .phone, .email{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .headImg, .footImg{
+        margin-right: 5px;
+    }
+
+    .mainBlock{
+       height: auto;
+        padding: 2rem 0rem 2rem 1.8rem;
+    }
+    
+    .mainDescription{
+        width: 100%;
+        height: 50%;
+        margin-top: 2rem;
+        margin-bottom: 110%
+    }
+    
+    .contactForm{
+        width: 98%;
+       height: auto;
+        padding: 3.2rem;
+        margin-top: 0rem; 
+        margin-right: 1rem; 
+    }
+    
+    .contactForm p{
+        width: 85%;
+        font-size: 1.6rem;
+    }
+    
+    .formInput form{
+        width: 100%;
+        flex-direction: column; 
+        align-items: start;
+
+    }
+    
+    .contactForm input{
+        font-size: 1.4rem;   
+    }
+      
+    .formInputGroup {
+        margin-bottom: 2rem; 
+    }
+      
+    .contactForm button{
+        width: 160px;
+        margin-top: 1.2rem;
+    }
+    
+    .typesDevelopment{
+        padding: 2rem 2rem 2.6rem 2rem;
+       height: auto;
+        display: block;
+    }
+         
+    .webAndMobile{
+        width: 75%;
+       height: auto;
+        font-size: 1.4rem;
+        margin-right: 8%; 
+    }
+    
+    .choiceDevelopment{
+        width: 100%;
+        margin-top: 15%;
+       height: auto;
+    }
+    
+    .choiceDevelopment a{
+        line-height: 2.4rem;
+    }
+    
+    footer {
+        width: 100%;
+        height: auto; 
+    }
+    .footerSection{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: 8%;
+    }
+    .contactFooter{
+        width: 50%;
+        text-align: start;
+    }
+    .contactFooter p{
+        font-size: 1.4rem;
+    }
 }
