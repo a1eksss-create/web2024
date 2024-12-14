@@ -35,8 +35,6 @@
     box-sizing: border-box;
     border-radius: 10px;
     opacity: 0.4;
-    display: block; 
-    margin-top: 5px;
 }
 
 .but{
@@ -50,37 +48,29 @@
     color: #FFFFFF;
     text-transform: uppercase;
     padding: 10px 30px;
-    margin-top: 5px;
 }
-
-label{ 
-    display: block; 
-} 
 
 form{
-    background-image: url("../img/3.jpg");
+    background-image: url(../img/3.jpg);
 }
 
-ul.breadcrumb{
-    padding: 10px 16px;
+.breadcrumb{
+    display: flex;
+    padding-left: 0;
     list-style: none;
     background-image: linear-gradient(#FFFFFF, #95BBBB, #5B9596);
-}
+    border-radius: 0 2px 2px 0;
+    overflow: hidden;
+} 
 
-ul.breadcrumb li{
-    display: inline;
-    font-size: 18px;
-}
+.breadcrumb li{
+    padding: 10px 10px;
+    border-radius: 0 25px 25px 0;
+    border-right: 2px solid white;
+    box-shadow: 1.5px 0 1.5px black;
+}  
 
-ul.breadcrumb li+li:before{
-    padding: 8px;
-    font-size:24px;
-    color: black;
-    content: ")\00a0";
-}
-
-ul.breadcrumb li a{
+.breadcrumb li a{
     color: black;
     text-decoration: none;
-} 
-  
+}
