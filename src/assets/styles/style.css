@@ -2,549 +2,525 @@
 @import "./fonts.css";
 @import "./utils.css";
 
-*{
+* {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
-html{
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
     font-size: 10px;
-}
-
-body{
+  }
+  
+  body {
     font-family: Arial, sans-serif;
-    background: rgba(242, 244, 247, 1);
-}
-
-.container {
+    background: rgb(242, 244, 247);
+  }
+  
+  .container {
     max-width: 1224px;
     margin: 0 auto;
-}
-
-header {
-    position: sticky;
-    top: 20px;
-    padding: 16px 24px; 
-    border-radius: 12px;
+  }
+  @media (max-width: 1439px) and (min-width: 767px) {
+    .container {
+      max-width: 960px;
+      padding: 3rem 2.4rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .container {
+      max-width: 100%;
+      padding: 3rem 2rem;
+    }
+  }
+  
+  .blockBackImg {
+    overflow: hidden;
+    position: relative;
+  }
+  .blockBackImg .animatedBackground {
+    position: absolute;
+    top: -100px;
+    right: -200px;
+    width: 55%;
+    height: 120%;
+    overflow: visible;
+    transform: rotate(-10deg);
+    z-index: -1;
     display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+  @media (max-width: 1439px) {
+    .blockBackImg .animatedBackground {
+      width: 50%;
+      right: -55px;
+    }
+  }
+  @media (max-width: 767px) {
+    .blockBackImg .animatedBackground {
+      top: 25vh;
+      overflow: hidden;
+    }
+  }
+  .blockBackImg .animatedBackground .animatedImgLeft, .blockBackImg .animatedBackground .animatedImgRight {
+    width: 40%;
+    height: 200%;
+    background-repeat: repeat-y;
+    background-size: contain;
+    background-position: center top;
+    animation: scroll-vertical 20s linear infinite;
+  }
+  @media (max-width: 767px) {
+    .blockBackImg .animatedBackground .animatedImgLeft, .blockBackImg .animatedBackground .animatedImgRight {
+      background-position: right bottom;
+    }
+  }
+  .blockBackImg .animatedBackground .animatedImgLeft {
+    background-image: url("../img/column-left.png");
+  }
+  .blockBackImg .animatedBackground .animatedImgRight {
+    background-image: url("../animations/column-right.webp");
+    animation-direction: reverse;
+  }
+  
+  @keyframes scroll-vertical {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+  header {
+    position: sticky;
+    top: 2rem;
+    z-index: 1000;
+    width: 90%;
+    height: 12%;
+    margin: auto;
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
-}
-
-.footerSection {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 48px;
-}
-
-.blockBackImg{
-    background-image: url("../img/main.png");
-    background-size: 55% auto;
-    background-position: right top; 
-    background-repeat: no-repeat;
-    
-}
-
-h3{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0rem 0.2rem 0.4rem 0rem rgba(0, 0, 0, 0.08);
+  }
+  header h3 {
     font-size: 2rem;
     font-weight: 600;
-}
-
-h2{
+    color: rgb(45, 102, 238);
+  }
+  @media (max-width: 1439px) {
+    header {
+      top: 10px;
+      width: 100%;
+      height: 9rem;
+      justify-content: space-between;
+    }
+  }
+  
+  h2 {
     font-size: 3.6rem;
     font-weight: 700;
     margin-bottom: 2.4rem;
-}
-
-button{
-    background: rgba(45, 102, 238, 1);
-    padding: 1.1rem 2.4rem 1.1rem 2.4rem;
+  }
+  @media (max-width: 1439px) {
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+  
+  button {
+    background: rgb(45, 102, 238);
+    padding: 1.1rem 2.4rem;
     border-radius: 0.8rem;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
-}
-
-header h3{
-    color: rgba(45, 102, 238, 1);
-}
-
-.phone, .email{
+  }
+  
+  .phone, .email {
     display: flex;
     flex-direction: row;
-}
-
-.hamburger{
+  }
+  @media (max-width: 1439px) {
+    .phone.phone, .email.phone {
+      display: none;
+    }
+  }
+  .phone.phone p, .email.phone p {
+    white-space: nowrap;
+  }
+  @media (max-width: 767px) {
+    .phone, .email {
+      display: none;
+    }
+  }
+  
+  .hamburger {
     display: none;
-}
-
-nav{
+  }
+  @media (max-width: 1439px) {
+    .hamburger {
+      display: block;
+    }
+  }
+  
+  nav {
     width: auto;
     min-width: 100px;
     max-width: 30%;
-}
-
-.navLinks{
-    margin: 0 2rem; 
+  }
+  nav .navLinks {
+    margin: 0 2rem;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    width:auto;
-}
-  
-.navLinks li {
+    width: auto;
+  }
+  nav .navLinks li {
     margin-right: 2rem;
-    color: rgba(16, 24, 40, 1);
+    color: rgb(16, 24, 40);
     font-weight: 500;
     font-size: 1.4rem;
-}
-
-.navLinks a, .contact a{
+  }
+  nav .navLinks li a {
     text-decoration: none;
-}
-
-.navLinks a{
-    color: rgba(16, 24, 40, 1);
+    color: rgb(16, 24, 40);
     font-weight: 500;
-}
-
-.headImg, .footImg{
+  }
+  @media (max-width: 1439px) {
+    nav {
+      display: none;
+    }
+  }
+  
+  .headImg, .footImg {
     margin-right: 0.5rem;
-}
-.headImg{
+  }
+  .headImg.headImg, .footImg.headImg {
     width: 2.4rem;
     height: 2.4rem;
-}
+  }
   
-.contact{
+  .contact {
     display: flex;
     flex-direction: row;
-}
-
-.contact p{
+  }
+  .contact p {
     margin-right: 2rem;
     font-weight: 500;
     font-size: 1.4rem;
-    color: rgba(45, 102, 238, 1);
+    color: rgb(45, 102, 238);
     line-height: 2.4rem;
-}
-
-.phone p{
+  }
+  .contact p.phone {
     white-space: nowrap;
-}
-
-.contact a{
-    color: rgba(45, 102, 238, 1);
-}
-
-.mainBlock {
-    padding: 60px 0; 
-    height: 790px;
-}
-
-.blueTxt{
-    color:rgba(45, 102, 238, 1);  
-}
-
-.mainDescription {
-    width: 600px;
-    margin-top: 40px;
-}
-
-
-.mainDescription p {
+  }
+  .contact a {
+    color: rgb(45, 102, 238);
+    text-decoration: none;
+  }
+  
+  .mainBlock {
+    width: 100%;
+    height: 79rem;
+    padding: 6rem 0;
+  }
+  @media (max-width: 1439px) {
+    .mainBlock {
+      height: auto;
+      padding: 2rem 0rem 2rem 2rem;
+    }
+  }
+  
+  .blueTxt {
+    color: rgb(45, 102, 238);
+  }
+  
+  .mainDescription {
+    width: 60rem;
+    margin-top: 4rem;
+  }
+  .mainDescription p {
     font-size: 1.5rem;
     font-weight: 500;
-}
-.contactForm {
-    width: 676px;
-    padding: 24px; 
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.16);
-    margin-top: 40px;
-}
-
-.contactForm p{
+  }
+  @media (max-width: 1439px) and (min-width: 767px) {
+    .mainDescription p {
+      width: 88%;
+    }
+  }
+  @media (max-width: 1439px) and (min-width: 767px) {
+    .mainDescription {
+      width: 53%;
+      height: auto;
+      margin-top: 2rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .mainDescription {
+      width: 100%;
+      height: 50%;
+      margin-top: 2rem;
+      margin-bottom: 110%;
+    }
+  }
+  
+  .contactForm {
+    width: 67.6rem;
+    height: 18.6rem;
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    background: rgb(255, 255, 255);
+    box-shadow: 0rem 0rem 2.4rem 0rem rgba(0, 0, 0, 0.16);
+    margin-top: 4rem;
+  }
+  @media (max-width: 1439px) {
+    .contactForm {
+      width: 29.5rem;
+      height: auto;
+      padding: 3.2rem;
+      margin-top: 2.4rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .contactForm {
+      width: 98%;
+      margin-top: 0;
+      margin-right: 1rem;
+    }
+  }
+  .contactForm p {
     width: 45rem;
     font-size: 2rem;
     line-height: 2.4rem;
     font-weight: 700;
-}
-
-.formInput form{
+  }
+  @media (max-width: 1439px) {
+    .contactForm p {
+      width: 100%;
+      font-size: 1.6rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .contactForm p {
+      width: 85%;
+    }
+  }
+  .contactForm .formInput form {
     width: 62.8rem;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     align-items: flex-end;
     margin-top: 3.2rem;
-}
-
-.contactForm label{
-    font-size: 1.3rem;
-    display: block; 
-    margin-bottom: 0.5rem; 
-    color: rgba(102, 112, 133, 1);
-
-}
-
-.contactForm input{
+  }
+  @media (max-width: 1439px) {
+    .contactForm .formInput form {
+      width: 100%;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+  .contactForm .formInput form input {
     font-size: 1.7rem;
-    border: 0.7px solid rgba(208, 213, 221, 1);
+    border: 0.7px solid rgb(208, 213, 221);
     border-style: none none solid none;
-    
-}
-
-.contactForm input::placeholder {
-    color: rgba(16, 24, 40, 1);
-}
-  
-  
-.formInputGroup {
-    margin-right: 2rem; 
-}
-  
-.contactForm button{
+  }
+  @media (max-width: 1439px) {
+    .contactForm .formInput form input {
+      font-size: 1.4rem;
+    }
+  }
+  .contactForm .formInput form input::-moz-placeholder {
+    color: rgb(16, 24, 40);
+  }
+  .contactForm .formInput form input::placeholder {
+    color: rgb(16, 24, 40);
+  }
+  .contactForm .formInput form .formInputGroup {
+    margin-right: 2rem;
+  }
+  @media (max-width: 1439px) {
+    .contactForm .formInput form .formInputGroup {
+      margin-bottom: 2rem;
+    }
+  }
+  .contactForm .formInput form button {
     width: 13.2rem;
     height: 5.8rem;
     font-size: 1.4rem;
     font-weight: 600;
     text-align: left;
-}
-
-.fullWidthBackground{
+  }
+  @media (max-width: 1439px) {
+    .contactForm .formInput form button {
+      width: 160px;
+      margin-top: 1.2rem;
+    }
+  }
+  .contactForm .formInput label {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: rgb(102, 112, 133);
+  }
+  
+  .fullWidthBackground {
     width: 100%;
-    background-color: white; 
+    background-color: rgb(255, 255, 255);
     padding: 6rem 0;
-}
-
-.typesDevelopment{
+  }
+  .fullWidthBackground .typesDevelopment {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    background-color: white;
-}
-.typesDevelopment h3{
-    margin: 3rem 0rem 1.5rem 0rem;
-}
-
-
-.webAndMobile{
+    background-color: rgb(255, 255, 255);
+  }
+  .fullWidthBackground .typesDevelopment h3 {
+    margin: 3rem 0 1.5rem 0;
+  }
+  @media (max-width: 1439px) {
+    .fullWidthBackground .typesDevelopment {
+      padding: 2rem 0rem 2.6rem 2rem;
+      height: auto;
+    }
+  }
+  @media (max-width: 767px) {
+    .fullWidthBackground .typesDevelopment {
+      display: block;
+    }
+  }
+  
+  .webAndMobile {
     width: 49.6rem;
     height: 32.4rem;
     font-size: 1.7rem;
-    margin-right: 28rem; 
-}
-.webAndMobile p{
+    margin-right: 28rem;
+  }
+  @media (max-width: 1439px) {
+    .webAndMobile {
+      width: 50%;
+      height: auto;
+      font-size: 1.4rem;
+      margin-right: 8%;
+    }
+  }
+  @media (max-width: 1439px) {
+    .webAndMobile {
+      width: 75%;
+    }
+  }
+  .webAndMobile p {
     line-height: 2.2rem;
-}
-
-.signature{
+  }
+  
+  .signature {
     font-size: 1.5rem;
-}
-.choiceDevelopment{
+  }
+  
+  .choiceDevelopment {
     width: 23.3rem;
     height: 34rem;
     font-size: 2rem;
     font-weight: 400;
     line-height: 2.4rem;
-}
-
-.choiceDevelopment ul{
+  }
+  @media (max-width: 1439px) {
+    .choiceDevelopment {
+      width: 40%;
+      margin-top: 15%;
+      height: auto;
+    }
+  }
+  @media (max-width: 1439px) {
+    .choiceDevelopment {
+      width: 100%;
+    }
+  }
+  .choiceDevelopment ul {
     list-style: none;
-}
-
-.choiceDevelopment li{
+  }
+  .choiceDevelopment ul li {
     margin-bottom: 1.2rem;
-}
-
-.choiceDevelopment a{
+  }
+  .choiceDevelopment ul li a {
     text-decoration: none;
     color: black;
     line-height: 3.4rem;
-}
-
-footer {
-    background: rgba(16, 24, 40, 1);
-    padding: 20px 0;
-    color: white;
+  }
+  @media (max-width: 1439px) {
+    .choiceDevelopment ul li a {
+      line-height: 2.4rem;
+    }
+  }
+  
+  footer {
+    background: rgb(16, 24, 40);
+    padding: 2rem 0;
+    color: rgb(255, 255, 255);
     text-align: center;
-    border-radius: 12px;
-}
-
-.footerSection{
+    width: 90%;
+    margin: auto;
+    border-radius: 1.2rem;
+    height: 22.2rem;
+  }
+  @media (max-width: 1439px) {
+    footer {
+      width: 100%;
+    }
+  }
+  footer .footerSection {
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 4.8rem;
-}
-
-.contact {
-    margin-bottom: 0.5rem;
-}
-  
-.contactFooter p{
+  }
+  @media (max-width: 767px) {
+    footer .footerSection {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-left: 8%;
+    }
+  }
+  @media (max-width: 767px) {
+    footer .footerSection .contactFooter {
+      width: 50%;
+      text-align: start;
+    }
+  }
+  footer .footerSection .contactFooter p {
     font-size: 1.7rem;
-    color: rgba(255, 255, 255, 1);
-}
-
-.contactFooterBlock{
+    color: rgb(255, 255, 255);
+  }
+  @media (max-width: 1439px) {
+    footer .footerSection .contactFooter p {
+      font-size: 1.4rem;
+    }
+  }
+  footer .footerSection .contactFooter .contactFooterBlock {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 1rem;
-}
-
-.contactFooterBlock p{
+  }
+  footer .footerSection .contactFooter .contactFooterBlock p {
     font-size: 1.4rem;
-    color: rgba(152, 162, 179, 1);
-}
-
-.footerSectionBlock {
-    width: 190px;
+    color: rgb(152, 162, 179);
+  }
+  footer .footerSectionBlock {
+    width: 19rem;
     margin: auto;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 1);
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-@media (max-width: 1439px) and (min-width: 767px) {
-
-    .container {
-        max-width: 960px; 
-        padding: 3rem 2.4rem; 
-    }
-
-    .blockBackImg {
-        background-image: url("../img/mainMedia.png");
-    }
-
-    header {
-        top: 10px;
-        height: 9rem;
-        justify-content: space-between;
-    }
-
-    h2 {
-        font-size: 2.8rem;
-        margin-bottom: 2.4rem;
-    }
-
-    nav, .phone {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .headImg, .footImg {
-        margin-right: 5px;
-    }
-
-    .mainBlock {
-        height: auto;
-    }
-
-    .mainDescription {
-        width: 53%;
-        height: auto;
-        margin-top: 2rem;
-    }
-
-    .contactForm {
-        width:53%;
-        height: auto;
-        padding: 3.2rem;
-        margin-top: 2.4rem;
-    }
-
-    .contactForm p {
-        width: 100%;
-        font-size: 1.6rem;
-    }
-
-    .formInput form {
-        width: 100%;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .contactForm input {
-        font-size: 1.4rem;
-    }
-
-    .formInputGroup {
-        margin-bottom: 2rem;
-    }
-
-    .contactForm button {
-        width: 160px;
-        margin-top: 1.2rem;
-    }
-
-    .fullWidthBackground{
-        padding: 0;
-    }
-
-    .typesDevelopment {
-        height: auto;
-    }
-
-    .webAndMobile {
-        width: 100%;
-        height: auto;
-        font-size: 1.4rem;
-        margin-right: 8%;
-    }
-
-    .choiceDevelopment {
-        width: 100%;
-        margin-top: 15%;
-        height: auto;
-    }
-
-    .choiceDevelopment a {
-        line-height: 2.4rem;
-    }
-
-    footer {
-        width: 100%;
-    }
-}
-
-@media (max-width: 767px) {
-
-    .container {
-        max-width: 100%; 
-        padding: 3rem 2rem; 
-    }
-
-    .blockBackImg {
-        width: 100%;
-        background-image: url("../img/mainMedia2.png");
-        background-size: auto 70%;
-        background-position: right bottom;
-        height: auto;
-    }
-
-    header {
-        top: 10px;
-        height: 9rem;
-        justify-content: space-between;
-    }
-
-    h2 {
-        font-size: 2.8rem;
-        margin-bottom: 2.4rem;
-    }
-
-    nav, .phone, .email {
-        display: none;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .headImg, .footImg {
-        margin-right: 5px;
-    }
-
-    .mainBlock {
-        height: auto;
-    }
-
-    .mainDescription {
-        width: 100%; 
-        height: auto;
-        margin-top: 2rem;
-        margin-bottom: 36vh;
-    }
-
-    .contactForm {
-        width: 100%;
-        height: auto;
-        padding: 3.2rem;
-        margin-top: 0;
-        margin-right: 1rem;
-    }
-
-    .contactForm p {
-        width: 100%;
-        font-size: 1.6rem;
-    }
-
-    .formInput form {
-        width: 100%;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .contactForm input {
-        font-size: 1.4rem;
-    }
-
-    .formInputGroup {
-        margin-bottom: 2rem;
-    }
-
-    .contactForm button {
-        width: 160px;
-        margin-top: 1.2rem;
-    }
-
-    .fullWidthBackground{
-        padding: 0;
-    }
-
-    .typesDevelopment {
-        height: auto;
-        display: block;
-    }
-
-    .webAndMobile {
-        width: 73%;
-        height: auto;
-        font-size: 1.4rem;
-        margin-right: 8%;
-    }
-
-    .choiceDevelopment {
-        width: 100%;
-        margin-top: 15%;
-        height: auto;
-    }
-
-    .choiceDevelopment a {
-        line-height: 2.4rem;
-    }
-
-    footer {
-        width: 100%;
-        height: auto;
-    }
-
-    .footerSection {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    .contactFooter {
-        margin-bottom: 5%;
-        width: calc(100vw/2.4);
-        text-align: start;
-    }
-
-    .contactFooter p {
-        font-size: 1.4rem;
-    }
-}
+  }/*# sourceMappingURL=style.css.map */
