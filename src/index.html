@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Калькулятор пиццы</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+  <h1>Пиццы</h1>
+
+  <h2>Выберите пиццу:</h2>
+  <div class="group">
+    <button class="pizza" data-stuffing="Маргарита">Маргарита</button>
+    <button class="pizza" data-stuffing="Пепперони">Пепперони</button>
+    <button class="pizza" data-stuffing="Баварская">Баварская</button>
+  </div>
+
+  <h2>Выберите размер:</h2>
+  <div class="group">
+    <button class="size" data-size="Маленькая">Маленькая</button>
+    <button class="size" data-size="Большая">Большая</button>
+  </div>
+
+  <h2>Добавить по вкусу:</h2>
+  <div class="toppings">
+    <label><input type="checkbox" class="topping" value="сливочная моцарелла" /> Сливочная моцарелла</label>
+    <label><input type="checkbox" class="topping" value="сырный борт" /> Сырный борт</label>
+    <label><input type="checkbox" class="topping" value="чедер и пармезан" /> Чедер и пармезан</label>
+  </div>
+
+  <button id="addToCart">Добавить в корзину</button>
+
+  <script src="PizzaCalculator.js"></script>
+</body>
+</html>
