@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Post Details</title>
+        <link rel="stylesheet" href="/src/assets/styles/style.css">
+    </head>
+    <body>
+        <a class="post-detail__back" href="postsList.html">Back to Posts</a>
+
+        <article class="post-detail">
+            <div data-post-id></div>
+            <div data-post-userId></div>
+            <div class="post-detail__title" data-post-title></div>
+            <div data-post-body></div>
+        </article>
+
+        <h2>Comments</h2>
+        <section class="comments">
+            <div class="comments__items" data-comments></div>
+        </section>
+
+        <script src="post.js" type="module"></script>
+    </body>
+</html>
