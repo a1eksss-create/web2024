@@ -8,119 +8,102 @@
     <h3>Задание №1</h3>
     
     <?php
-    $a = 6;
-    $b = -3;
-    echo "Число a = $a, число b = $b <br>";
-
-    if ($a >= 0 && $b >= 0) {
-        echo "Разность чисел: " . ($a - $b) . "<br>";
-    } elseif ($a < 0 && $b < 0) {
-        echo "Произведение чисел: " . ($a * $b) . "<br>";
-    } else {
-        echo "Сумма чисел: " . ($a + $b) . "<br>";
-    }
+    $i = 0;
+    do {
+        if ($i == 0) {
+            echo "$i – это ноль.<br>";
+        } elseif ($i % 2 == 0) {
+            echo "$i – чётное число.<br>";
+        } else {
+            echo "$i – нечётное число.<br>";
+        }
+        $i++;
+    } while ($i <= 10);
     ?>
 
     <h3>Задание №2</h3>
     <?php
-    $a = rand(0, 15);
+    $regions = [
+    'Московская область' => ['Москва', 'Зеленоград', 'Клин'],
+    'Ленинградская область' => ['Санкт-Петербург', 'Всеволожск', 'Павловск', 'Кронштадт'],
+    'Рязанская область' => ['Рязань', 'Касимов', 'Ряжск'],
+    'Тюменская область' => ['Тюмень', 'Тобольск', 'Ишим']
+    ];
 
-    echo "Число a = $a <br> Числа от $a до 15:<br>";
-
-    switch ($a) {
-        case 0: echo "0 ";
-        case 1: echo "1 ";
-        case 2: echo "2 ";
-        case 3: echo "3 ";
-        case 4: echo "4 ";
-        case 5: echo "5 ";
-        case 6: echo "6 ";
-        case 7: echo "7 ";
-        case 8: echo "8 ";
-        case 9: echo "9 ";
-        case 10: echo "10 ";
-        case 11: echo "11 ";
-        case 12: echo "12 ";
-        case 13: echo "13 ";
-        case 14: echo "14 ";
-        case 15: echo "15 ";
+    foreach ($regions as $region => $cities) {
+        echo "$region:<br>";
+        echo implode(', ', $cities) . ".<br><br>";
     }
     ?>
     
     <h3>Задание №3</h3>
     <?php
 
-    function add($x, $y) {
-        return $x + $y;
+   function transliterate($str) {
+    $translit = [
+        'а' => 'a',   'б' => 'b',   'в' => 'v',   'г' => 'g', 'д' => 'd',   'е' => 'e',   'ё' => 'yo',  'ж' => 'zh',
+        'з' => 'z',   'и' => 'i',   'й' => 'y',   'к' => 'k', 'л' => 'l',   'м' => 'm',   'н' => 'n',   'о' => 'o',
+        'п' => 'p',   'р' => 'r',   'с' => 's',   'т' => 't', 'у' => 'u',   'ф' => 'f',   'х' => 'h',   'ц' => 'ts',
+        'ч' => 'ch',  'ш' => 'sh',  'щ' => 'sch', 'ъ' => '', 'ы' => 'y',   'ь' => "'",    'э' => 'e',   'ю' => 'yu', 'я' => 'ya'
+    ];
+
+    $str = mb_strtolower($str, 'UTF-8');
+    $result = '';
+    for ($i = 0; $i < mb_strlen($str); $i++) {
+        $char = mb_substr($str, $i, 1);
+        $result .= $translit[$char] ?? $char;
     }
 
-    function subtract($x, $y) {
-        return $x - $y;
-    }
-
-    function multiply($x, $y) {
-        return $x * $y;
-    }
-
-    function divide($x, $y) {
-        if ($y == 0) return "Делить на ноль нельзя";
-        return $x / $y;
-    }
-
-    $a = rand(-100, 100);
-    $b = rand(-100, 100);
-    echo "Число a = $a, число b = $b <br>";
-    echo "Сложение чисел:" . add($a, $b) . "<br>";
-    echo "Вычитание чисел:" . subtract($a, $b) . "<br>";
-    echo "Произведение чисел:" . multiply($a, $b) . "<br>";
-    echo "Деление чисел:" . divide($a, $b) . "<br>";
+    return $result;
+    }?>
+    <p>Прикладная информатика:</p> <?php
+    echo transliterate("Прикладная информатика"); 
     ?>
 
     <h3>Задание №4</h3>
     <?php
-    function mathOperation($arg1, $arg2, $operation) {
-        switch ($operation) {
-            case 'плюс':
-                return add($arg1, $arg2);
-            case 'минус':
-                return subtract($arg1, $arg2);
-            case 'умножить':
-                return multiply($arg1, $arg2);
-            case 'разделить':
-                return divide($arg1, $arg2);
-            default:
-                return "Неизвестная операция";
-        }
+    $menu = [
+        'Главная' => '/',
+        'Тюмгу' => '/',
+        'Институты' => [
+            'ШКН' => '/',
+            'ИнХИМ' => '/',
+            'ФТИ' => '/'
+        ],
+        'Контакты' => '/'
+    ];
+
+    function dinamicMenu($menuItems) {?>
+        <ul><?php
+        foreach ($menuItems as $title => $link): ?>
+            <li> <?php
+            if (is_array($link)) {
+                echo "<a href='#'>$title</a>";
+                dinamicMenu($link);
+            } else {
+                echo "<a href='$link'>$title</a>";
+            }?>
+            </li><?php
+        endforeach; ?>
+        </ul> <?php
     }
-    $arg1 = rand(-100, 100);
-    $arg2 = rand(-100, 100);
-    $oper = 'минус';
-    echo "Первый аргумент = $arg1, второй аргумент = $arg2, операция $oper <br>";
-
-    $result = mathOperation($arg1, $arg2, $oper);
-    echo "mathOperation: $result";
-    ?>
-
-    <h3>Задание №5</h3>
-    <?php
-    echo "1 способ череp date(): " . date("Y") . "<br>";
-
-    $now = new DateTime();
-    echo "2 способ через DateTime: " . $now->format('Y') . "<br>";
-
-    echo "3 способ через idate(): " . idate("Y");
+    dinamicMenu($menu);
     ?>
 
     <h3>Задание №6</h3>
+    <p>Города на букву К:</p>
     <?php
-    function power($val, $pow) {
-        if ($pow == 0) return 1;
-        if ($pow > 0) return $val * power($val, $pow - 1);
-        else return 1 / power($val, -$pow);
-    }
+    foreach ($regions as $region => $cities):
+        $filtered = array_filter($cities, function($city) {
+            return mb_substr($city, 0, 1, 'UTF-8') === 'К';
+        });
 
-    echo "2 в степени 3 = " . power(2, 3) . "<br>";
-    echo "16 в степени -2 = " . power(16, -2);
+        if (!empty($filtered)) {
+            echo "$region:<br>";
+            echo implode(', ', $filtered) . ".<br><br>";
+        }
+
+    endforeach
     ?>
 </body>
 </html>
